@@ -44,7 +44,34 @@ package com.cybertek.tests.Day09_Tabs_Frames_Alerts_PopUps;
 
 
 
+      WHY NoSuchElementException?:
+      1. wrong locator
+      2. wait time
+      3. Frames
 
+   Frames:
+    In html we can have one html page inside another one.   a page can have 2 html tags. Selenium can watch only one.
+    This is made possible by tag <iframe>. Using frames we can put html inside html. When we have page with iframes, selenium cannot control what is inside the iframe. We have
+        to switch to iframe. When we switch to iframe it will not see the default page, but only iframe.
+
+        for different browsers we need to use different methods to switch between frames
+            1. ID or Names
+            2. Index
+            3. WebElement
+
+
+
+Order to switch to nested frames:
+        HTML
+            top frame
+                left frame
+                 mid frame
+                right frame
+
+    In selenium we can only jump one frame at a time. If we are in the middle frame, and we need to go to right frame, we need to go to parent frame 'top frame', and then choose 'right frame'.
+        we need to exit, and then to re-enter in the frame we need
+
+        NoSuchFrameException -->> we get this when we provide wrong frame info to switchTo().frame() method.
 
      */
 
