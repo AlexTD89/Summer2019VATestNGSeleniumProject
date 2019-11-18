@@ -1,8 +1,10 @@
-package com.cybertek.tests.D1_basic_navigation;
+package com.cybertek.tests.D01_basic_navigation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class NavigationDemo {               // to make Thread.sleep() work
     public static void main(String[] args) throws InterruptedException {
@@ -40,7 +42,7 @@ public class NavigationDemo {               // to make Thread.sleep() work
         //   Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more
 
 
-        Thread.sleep(1000);
+        Thread.sleep(1000);  // or driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.navigate().refresh(); // reloads the page
         System.out.println(driver.getTitle());
         //   Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more

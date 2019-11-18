@@ -1,4 +1,4 @@
-package com.cybertek.tests;
+package com.cybertek.tests.D0_FirstClass;
 
 import com.github.javafaker.Faker;
 
