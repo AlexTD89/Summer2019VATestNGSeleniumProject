@@ -24,7 +24,7 @@ public class ActionsExampleTest {
     }
 
     @Test
-    public void test1(){
+    public void moveToTest(){
         driver.get("http://practice.cybertekschool.com/hovers");
 
         WebElement img1 = driver.findElement(By.tagName("img"));
