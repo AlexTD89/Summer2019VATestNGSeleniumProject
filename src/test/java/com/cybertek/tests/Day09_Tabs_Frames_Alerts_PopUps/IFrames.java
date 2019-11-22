@@ -32,7 +32,7 @@ public class IFrames {
         //switch to iframe
         //1.    id or Name
         //switchTo().frame()    -->> switch to frame
-        driver.switchTo().frame("mce_0_ifr");   // llok for iframe tag
+        driver.switchTo().frame("mce_0_ifr");   // look for iframe tag
         //send a text
         driver.findElement(By.id("tinymce")).sendKeys("Hello");
 

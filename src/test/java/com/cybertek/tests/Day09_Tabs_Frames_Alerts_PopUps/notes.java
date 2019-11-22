@@ -73,6 +73,17 @@ Order to switch to nested frames:
 
         NoSuchFrameException -->> we get this when we provide wrong frame info to switchTo().frame() method.
 
+        switchTo().frame()    -->> switch to frame
+        driver.switchTo().defaultContent() -->> go back to the grand parent frame
+        driver.switchTo().parentFrame();    -->> go back to the parent frame
+        Alert alert = driver.switchTo().alert() -->> this is the way we create an alert object
+        alert.accept()  -->> accepts the alert
+        alert=driver.switchTo().alert() -->> switch to the new alert
+        alert.dismiss() -->> dismiss alert, clicking cancel/x on the alert
+
+        Set -->> is just like arrayLs=ist, but without duplicate values
+        Set<String> windowHandles = driver.getWindowHandles();
+
      */
 
 public class notes {

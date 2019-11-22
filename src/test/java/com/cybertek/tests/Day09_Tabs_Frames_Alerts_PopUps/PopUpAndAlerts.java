@@ -110,7 +110,7 @@ public class PopUpAndAlerts {
             }
         }
 
-        System.out.println("After switching"+driver.getTitle()); // After switchingNew Window
+        System.out.println("After switching "+driver.getTitle()); // After switching New Window
 
     }
 
