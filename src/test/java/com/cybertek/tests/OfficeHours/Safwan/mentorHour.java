@@ -1,4 +1,4 @@
-package com.cybertek.tests.OfficeHours.ExtraHours_Safwan;
+package com.cybertek.tests.OfficeHours.Safwan;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
