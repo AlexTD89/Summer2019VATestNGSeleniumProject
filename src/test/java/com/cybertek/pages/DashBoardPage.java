@@ -9,6 +9,6 @@ public class DashBoardPage extends BasePage {
 //    public  DashBoardPage(){
 //        PageFactory.initElements(Driver.get(), this);
 //    }
-    //todo but because we extend this class ti TestBase, and TestBase has the constructor... we don't need it here.
+    //todo we extend this class ti BasePage, and BasePage has the constructor... we don't need it here.
 
 }

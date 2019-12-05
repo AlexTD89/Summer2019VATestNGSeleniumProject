@@ -27,15 +27,4 @@ public class PageSubtitlesPage extends TestBase {
         Assert.assertEquals(actual, "Calendar Events");
 
     }
-
-
-    @Test
-    public void testCase1(){
-
-    }
-
-    @Test
-    public void testCase2(){
-
-    }
 }
