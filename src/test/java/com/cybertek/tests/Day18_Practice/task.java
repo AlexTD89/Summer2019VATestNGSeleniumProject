@@ -12,3 +12,9 @@ Verify that phone number is   mbrackstone9@example.com
  */
 public class task {
 }
+
+/*
+notes:
+
+    can't use @FindBy testNg with a dynamic xpath
+ */
