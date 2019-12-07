@@ -29,6 +29,26 @@ Page object Model part2:
         4. OK
         5. Make Class abstract
 
+
+        TODO:
+        VERIFY RADIO BUTTONS
+        Open browser
+        Login as driver
+        Go to Activities —> Calenday Events
+        Click on crate calendar events
+        Click on repeat
+        Verify that repeat every days is checked
+        Verify that repeat weekday is not checked
+
+        TODO
+        VERIFY REPEAT OPTIONS
+        Open browser
+        Login as driver
+        Go to Activities —> Calendar Events
+        Click on crate calendar events
+        Click on repeat
+        Verify that repeat options are Daily, Weekly, Monthly, Yearly (in that order)
+
  */
 
 

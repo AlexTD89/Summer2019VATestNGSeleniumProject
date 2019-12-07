@@ -8,6 +8,7 @@ import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -21,6 +22,7 @@ public class TestBase {
     protected WebDriver driver;
     protected String url;
     Actions actions;
+    WebDriverWait wait;
     protected ExtentReports report;
     protected ExtentHtmlReporter htmlReporter;
     protected ExtentTest extentLogger;
@@ -28,9 +30,13 @@ public class TestBase {
 
     @BeforeTest
     public void setUpTest(){
+        //initialize variable
         report = new ExtentReports();
+        //create report path, report will be in test output folder, name --> report.html
         String path = System.getProperty("user.dir") + "/test-output/report.html";
+        //initialize the html reporter with the report path
         htmlReporter = new ExtentHtmlReporter(path);
+        // attach the html report to the report object
         report.attachReporter(htmlReporter);
 
         // here we give name of our project
@@ -55,6 +61,7 @@ public class TestBase {
         driver.get(url);
         actions = new Actions(driver);
         driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, 5);
     }
 
     @AfterMethod

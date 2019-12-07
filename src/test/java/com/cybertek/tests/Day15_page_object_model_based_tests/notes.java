@@ -50,8 +50,10 @@ package com.cybertek.tests.Day15_page_object_model_based_tests;
     @FindBy ->> annotation from selenium, used to provide locator for the element
             @FindBy(id="prependedInput")    // by id, by css, by xpath, by name etc...
             public WebElement userName;
+    @FindBys —> it takes multiple locators and finds element that match at least one of the
+locators
 
-
+@FindAll —> it takes multiple locators and finds element that match all of the locators
 
 
 

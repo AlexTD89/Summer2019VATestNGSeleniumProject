@@ -21,6 +21,13 @@ package com.cybertek.tests.Day17_html_Extent_Reporting;
             3. ExtentTest extentLogger; -->>    (used the most) this class will define a test, enables adding logs, authors etc..
                             extentLogger.info ->> we will have to wrote every time we build a new test, otherwise it will not describe the steps of the new test
 
+
+        ITestResult —> this is a class from testng.
+                 ITestResult contains information about the current @Test test case in testng.
+
+        In selenium we take screenshot using TakesScreenshot class.
+
+
 Interview question: which html report did you use
         explain all steps of how we use for example: Extent, all classes we use, where and how we use them.
             so for that I have to go over all these steps
