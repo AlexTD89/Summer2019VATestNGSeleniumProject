@@ -1,4 +1,4 @@
-package com.cybertek.tests.Day18_Practice;
+package com.cybertek.tests.Day18_pom_Practice;
 
 
 /*
