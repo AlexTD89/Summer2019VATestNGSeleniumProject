@@ -62,7 +62,7 @@ public abstract class BasePage {
     }
 
     public String getUserName(){
-        waitUntilLoaderScreenDisappear();
+//        waitUntilLoaderScreenDisappear();
         BrowserUtils.waitForVisibility(userName, 5);
         return userName.getText();
     }

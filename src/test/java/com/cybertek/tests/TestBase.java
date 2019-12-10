@@ -10,10 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -21,8 +18,8 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     protected WebDriver driver;
     protected String url;
-    Actions actions;
-    WebDriverWait wait;
+    protected Actions actions;
+    protected WebDriverWait wait;
     protected ExtentReports report;
     protected ExtentHtmlReporter htmlReporter;
     protected ExtentTest extentLogger;
@@ -54,10 +51,19 @@ public class TestBase {
     }
 
     @BeforeMethod
-    public void setUP(){
+    @Parameters("env")
+    public void setUP(@Optional String env){
+        System.out.println("env = " + env);
+        //ENV IS null use default url
+        //if ENV is not null, get the url based on env
+        if(env == null){
+            url = ConfigurationReader.get("url");
+        }else{
+            url=ConfigurationReader.get(env+"_url");
+        }
         driver = Driver.get();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        url = ConfigurationReader.get("url");
+//        url = ConfigurationReader.get("url");
         driver.get(url);
         actions = new Actions(driver);
         driver.manage().window().maximize();

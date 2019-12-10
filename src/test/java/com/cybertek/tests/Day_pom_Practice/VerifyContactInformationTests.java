@@ -1,8 +1,7 @@
-package com.cybertek.tests.Day18_pom_Practice;
+package com.cybertek.tests.Day_pom_Practice;
 
 import com.cybertek.pages.*;
 import com.cybertek.tests.TestBase;
-import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;

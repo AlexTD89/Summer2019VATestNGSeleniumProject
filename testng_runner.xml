@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack automation" verbose="1">
+<!--    HOW TO RUN A SPECIFIC PACKAGE-->
+    <test name="Vytrack smoke test">
+        <packages>
+<!--            specific package: -->
+            <package name="com.cybertek.tests.Day16_page_object_model_2"></package>
+<!--            or we can make run only specific test:  -->
+         <package name="com.cybertek.tests.Day17_html_Extent_Reporting.NegativeLoginTestWithReports"></package>
+<!--            specific package-->
+            <package name="com.cybertek.tests.Day15_page_object_model_based_tests"></package>
+        </packages>
+
+<!--        Specific classes, including some methods, excluding some methods -->
+        <classes>
+            <class name="com.cybertek.tests.Day17_html_Extent_Reporting.NegativeLoginTestWithReports">
+                <methods>
+                    <include name="wrongUsernameTest"></include>
+                    <exclude name="wrongPasswordTest"></exclude>
+                </methods>
+
+            </class>
+        </classes>
+
+
+
+
+
+    </test>
+</suite>
+

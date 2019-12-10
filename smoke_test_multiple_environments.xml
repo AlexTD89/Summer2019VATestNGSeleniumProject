@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack automation" verbose="10">
+    <test name="QA1 Vytrack smoke test">
+        <parameter name="env" value="qa1"></parameter>
+        <classes>
+            <class name="com.cybertek.tests.Day17_html_Extent_Reporting.NegativeLoginTestWithReports"></class>
+        </classes>
+    </test>
+
+<!--    set of different tests for different environment-->
+    <test name="QA2 Vytrack smoke test">
+        <parameter name="env" value="qa2"></parameter>
+        <classes>
+            <class name="com.cybertek.tests.Day16_page_object_model_2.PageSubtitlesPage"></class>
+        </classes>
+    </test>
+<!--    we can do same for environment qa3, and build a suit for that specific environment-->
+    <test name="QA3 Vytrack smoke test">
+        <parameter name="env" value="qa3"></parameter>
+        <classes>
+            <class name="com.cybertek.tests.Day16_page_object_model_2.RepeatOptionsTest"></class>
+        </classes>
+    </test>
+
+<!--    All 3 environments will run, when we will pass a parameter to the @BeforeMethod in TestBase class -->
+</suite>
