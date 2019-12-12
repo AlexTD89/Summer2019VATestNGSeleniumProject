@@ -1,5 +1,4 @@
 package com.cybertek.pages;
-
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
@@ -13,17 +12,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
 
-
     @FindBy(css = "div[class='loader-mask shown']")
     @CacheLookup
     protected WebElement loaderMask;
 
     @FindBy(css = "h1[class='oro-subtitle']")
-    protected WebElement pageSubTitle;
+    public WebElement pageSubTitle;
 
     @FindBy(css = "#user-menu > a")
-    protected WebElement userName;
-
+    public WebElement userName;
 
     @FindBy(linkText = "Logout")
     public WebElement logOutLink;
@@ -57,12 +54,13 @@ public abstract class BasePage {
             WebDriverWait wait = new WebDriverWait(Driver.get(), 5);
             wait.until(ExpectedConditions.invisibilityOf(loaderMask));
         } catch (Exception e) {
-            System.out.println("Loader mask doesn't present.");
+            e.printStackTrace();
         }
+
     }
 
     public String getUserName(){
-//        waitUntilLoaderScreenDisappear();
+        waitUntilLoaderScreenDisappear();
         BrowserUtils.waitForVisibility(userName, 5);
         return userName.getText();
     }
@@ -105,15 +103,10 @@ public abstract class BasePage {
             BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(moduleLocator)));
             Driver.get().findElement(By.xpath(moduleLocator)).click();
         } catch (Exception e) {
-            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
+//            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
     }
-
-
-
-
-
 
 
 }
