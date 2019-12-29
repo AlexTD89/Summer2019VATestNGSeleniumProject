@@ -76,6 +76,7 @@ Order to switch to nested frames:
         switchTo().frame()    -->> switch to frame
         driver.switchTo().defaultContent() -->> go back to the grand parent frame
         driver.switchTo().parentFrame();    -->> go back to the parent frame
+
         Alert alert = driver.switchTo().alert() -->> this is the way we create an alert object
         alert.accept()  -->> accepts the alert
         alert=driver.switchTo().alert() -->> switch to the new alert
